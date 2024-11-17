@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#151515"
+    tools:context=".presentation.RegistrationActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvRegistration"
+        android:text="Регистрация"
+        android:textColor="#F2F2F3"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="28sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEmailInput"
+        android:text="Email"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistration"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:textColor="#F2F2F3"
+        android:textSize="16sp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/til_emailInput"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailInput">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_emailInput"
+            android:background="@drawable/input_background"
+            android:hint="example@gmail.com "
+            android:inputType="textEmailAddress">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvPassword"
+        android:text="Пароль"
+        app:layout_constraintTop_toBottomOf="@+id/til_emailInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:textColor="#F2F2F3"
+        android:textSize="16sp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/til_passwordInput"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPassword">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_passwordInput"
+            android:background="@drawable/input_background"
+            android:hint="Введите пароль"
+            android:inputType="textVisiblePassword">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvRepeatPassword"
+        android:text="Повторить пароль"
+        app:layout_constraintTop_toBottomOf="@+id/til_passwordInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:textColor="#F2F2F3"
+        android:textSize="16sp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/til_passwordRepeatInput"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRepeatPassword">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_passwordRepeatInput"
+            android:background="@drawable/input_background"
+            android:hint="Введите пароль ещё раз"
+            android:inputType="textVisiblePassword">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRegistration"
+        app:layout_constraintTop_toBottomOf="@+id/til_passwordRepeatInput"
+        android:layout_margin="16dp"
+        android:backgroundTint="#12B956"
+        android:text="Регистрация"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAccountAuthrorization"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Уже есть аккаунт? Войти"
+        android:gravity="center"
+        android:textColor="#F2F2F3"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="16dp"
+        android:background="#4D555E"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccountAuthrorization"
+        tools:layout_editor_absoluteX="16dp" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnVK"
+        android:backgroundTint="#2683ED"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountAuthrorization"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnOdnoklassniki"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/icon_vk"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnOdnoklassniki"
+        android:backgroundTint="#F98509"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountAuthrorization"
+        app:layout_constraintStart_toEndOf="@id/btnVK"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/icon_odnoklass"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
